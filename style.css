@@ -1,0 +1,59 @@
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+
+body{
+    background-color: rgb(10,10,10);
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+}
+
+h1{
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(2em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+}
+
+
+h1 > .magic {
+    font-weight: 800;
+    animation: background-pan 3s linear infinite, pulsate 3s ease-out infinite;
+    background: linear-gradient(
+        to right,
+        rgb(255,0,0),
+        rgb(255,165,0),
+        rgb(255,255,0),
+        rgb(0,128,0),
+        rgb(0,0,255),
+        rgb(128,0,128),
+        rgb(238, 130, 238)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space:nowrap;
+}
