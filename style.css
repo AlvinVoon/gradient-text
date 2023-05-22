@@ -40,7 +40,7 @@ h1{
 
 
 h1 > .magic {
-    font-weight: 800;
+    font-weight: 1200;
     animation: background-pan 3s linear infinite, pulsate 3s ease-out infinite;
     background: linear-gradient(
         to right,
